@@ -1,0 +1,38 @@
+body{
+    background-color: #FFFFE8;
+    opacity: 1;
+}
+.heading{
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-size:30px;
+border:1px;
+padding:10px;
+font-weight:bolder;
+}
+.image{
+    width:325px;
+}
+.text-color{
+    color:#FFC93C;
+}
+.btn-color{
+    background-color:#FFC93C;
+}
+
+.change{
+    background: rgba(0,0,0,0.78);
+    border-radius:20px;
+}
+
+.label{
+    color:#FFC93C;
+}
+.thumbnail{
+    margin:18px;
+    width:200px;
+}
+.form-signin{
+    color:#FFC93C;
+    display: block;
+    width: 260px;
+}

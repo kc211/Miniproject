@@ -1,0 +1,39 @@
+body{
+    background-color: #FFFFE8;
+    opacity: 1;
+}
+.cin{
+    display: flex;
+    flex-direction: row;
+}
+.gello{
+    margin-top: 32vh;
+    margin-left:30vw;
+
+}
+.leftcontainer{
+   
+  
+width: 20vw; height: 30vh;
+padding:2px;
+margin-top: 150px;;
+}
+.details{
+   cursor: pointer;
+    border-radius: 20px;
+    margin:4px;
+    
+
+}
+.nav-link{
+    text-align: center;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+.hoverlink:hover{
+    background-color: #ffc93c;
+    font-size:1.3rem;
+color:black;
+}

@@ -26,34 +26,78 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    
+
                     <li class="nav-item">
-                        <a class="nav-link text-dark bg-light" href="#">LogOut</a>
+                        <a class="nav-link text-dark bg-light" href="index.html">LogOut</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="customise">
+
+        <form class="form-inline">
+            <label class="my-1 mr-2" for="semester">Semester</label>
+            <select class="custom-select happy my-1 mr-sm-2" id="semseters">
+                <option selected>Choose...</option>
+                <option value="1">1st</option>
+                <option value="2">2nd</option>
+                <option value="3">3rd</option>
+                <option value="4">4th</option>
+                <option value="5">5th</option>
+                <option value="6">6th</option>
+            </select>
+            <label class="my-1 mr-2" for="Section">Section</label>
+            <select class="custom-select happy  my-1 mr-sm-2" id="Sections">
+            <option selected>Choose...</option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+            
+        </select>
+        <label class="my-1 mr-2" for="Subject">Subject</label>
+        <select class="custom-select happy my-1 mr-sm-2" id="Subject">
+            <option selected>Choose...</option>
+            <option value="wt">Webtechnology</option>
+            <option value="mpi">MPI</option>
+            <option value="se">SE</option>
+            <option value="etc">ETC</option>
+            <option value="cis">CIS</option>
+            <option value="ensa">ENSA</option>
+            
+        </select>
+        
+        
+        
+        <button type="submit" class="btn btn-outline-dark my-1 ml-2">Verify</button>
+    </form>
+</div>
+    
+    
+
     <div class="cin">
 
-        <div class="leftcontainer ml-0" >
+        <div class="leftcontainer ml-0">
             <ul class="nav flex-column">
                 <li class="nav-item details">
-                    <a class="nav-link hoverlink" id="profile" href="#" onclick="document.getElementById('result').innerHTML='bro'">Profile</a>
-            </li>
-            <li class="nav-item details">
-                <a class="nav-link hoverlink" id="scan" href="#">Scan the QR</a>
-            </li>
-            <li class="nav-item details">
-                <a class="nav-link hoverlink" href="#">Attendance</a>
-            </li>
-            <li class="nav-item details">
-                <a class="nav-link hoverlink">Condonation Status</a>
-            </li>
-        </ul>
+                    <a class="nav-link hoverlink" id="profile" href="#"
+                        onclick="document.getElementById('result').innerHTML='bro'">Profile</a>
+                </li>
+                <li class="nav-item details">
+                    <a class="nav-link hoverlink" id="scan" href="#">Get the QR</a>
+                </li>
+                <li class="nav-item details">
+                    <a class="nav-link hoverlink" href="#">Result review</a>
+                </li>
+                <li class="nav-item details">
+                    <a class="nav-link hoverlink">Time-table</a>
+                </li>
+            </ul>
+        </div>
+        <div class="gello" id="result">
+            <h1></h1>
+        </div>
     </div>
-    <div class="gello" id="result"><h1>hi</h1></div>
-</div> 
 <!--JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

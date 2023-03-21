@@ -2,6 +2,25 @@ body{
     background-color: #FFFFE8;
     opacity: 1;
 }
+select{
+    width:200px;
+}
+form{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+label{
+    margin-left: 25px;
+}
+.customise{
+    display: flex;
+    flex-direction: row;
+    margin-top:20px;
+    margin-left:25vw;
+}
+.happy{
+    width: 120px;
+}
 .cin{
     display: flex;
     flex-direction: row;
@@ -9,12 +28,13 @@ body{
 .gello{
     margin-top: 32vh;
     margin-left:30vw;
+    width:100%;
 
 }
 .leftcontainer{
    
   
-width: 20vw; height: 30vh;
+width: 40vw; height: 30vh;
 padding:2px;
 margin-top: 150px;;
 }

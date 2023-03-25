@@ -63,29 +63,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
     <!--for the qr-->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js" integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script>
-        const scanner = new Html5QrcodeScanner('reader', {
-            qrbox: {
-                width: 200,
-                heigth: 200,
-            },
-            fps: 20
-        });
-        scanner.render(success, error)
-
-        function success(result1) {
-            document.getElementById('result1') = `<h2>success</h2>
-    <p><a href=${result1}>${result1}</a></p>`
-        }
-        // scanner.clear();
-        // document.getElementById('result1').remove();
-
-        function error(err) {
-            console.log(err);
-        }
-    </script>
+    <script src="./node_modules/html5-qrcode/html5-qrcode.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
@@ -95,7 +73,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+    <script>
+        // When scan is successful fucntion will produce data
+        function onScanSuccess(qrCodeMessage) {
+            document.getElementById("result").innerHTML =
+                '<span class="result">' + qrCodeMessage + "</span>";
+        }
 
+        // When scan is unsuccessful fucntion will produce error message
+        function onScanError(errorMessage) {
+            // Handle Scan Error
+        }
+
+        // Setting up Qr Scanner properties
+        var html5QrCodeScanner = new Html5QrcodeScanner("reader", {
+            fps: 10,
+            qrbox: 250
+        });
+
+        // in
+        html5QrCodeScanner.render(onScanSuccess, onScanError);
+    </script>
 </body>
 
 </html>

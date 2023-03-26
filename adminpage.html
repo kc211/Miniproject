@@ -11,6 +11,35 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="adminpage.css">
     <title>Admin</title>
+    <script>function show_profile()
+        {
+            a=document.getElementById('profiletable');
+            b=document.getElementById('qrcodedisplay')
+            if(a.style.display=='none' && b.style.display=='none'){
+                a.classList.remove('d-none')
+
+            }
+            else{
+                b.classList.add('d-none')
+                a.classList.remove('d-none')
+            }
+            
+           
+        }
+        function show_qr(){
+            a=document.getElementById('profiletable');
+            b=document.getElementById('qrcodedisplay')
+            if(b.style.display=='none' && a.style.display=='none'){
+                
+                b.classList.remove('d-none')
+
+            }
+            else{
+                a.classList.add('d-none')
+                b.classList.remove('d-none')
+            }
+        }
+     </script>
 </head>
 
 <body>
@@ -84,10 +113,10 @@
             <ul class="nav flex-column">
                 <li class="nav-item details">
                     <a class="nav-link hoverlink" id="profile" href="#"
-                        onchange="show_profile(this)">Profile</a>
+                        onclick="show_profile()">Profile</a>
                 </li>
                 <li class="nav-item details">
-                    <a class="nav-link hoverlink" id="scan" href="#" onchange="show_qr(this)">Get the QR</a>
+                    <a class="nav-link hoverlink" id="scan" href="#" onclick="show_qr()">Get the QR</a>
                 </li>
                 <li class="nav-item details">
                     <a class="nav-link hoverlink" href="#">Result review</a>
@@ -100,7 +129,7 @@
         <div class="gello" id="result">
             <!-- <div class="qrcode"> -->
             <!-- <img src="hello.png" class="qr-code" alt=""> -->
-            <div class="matter d-none" id="profiletable">
+            <div class="matter d-none" id="profiletable" value="0">
                 <table class="table table-bordered table-dark">
                     <tbody>
 
@@ -125,7 +154,7 @@
                     </tbody>
                 </table>
             </div>
-                <div class="qrcode d-none" id="qrcodedisplay">
+                <div class="qrcode d-none" id="qrcodedisplay" value="1">
                     <img src="hello.png" class="qr-code" alt="">
                 </div>
         </div>
@@ -160,33 +189,7 @@
                 document.getElementById('subject').classList.add('d-none')
             }
         }
-        // function show_profile()
-        // {
-            
-        //     let a;
-        //     if(a==1){
-
-        //         document.getElementById('profiletable').classList.remove('d-none')
-        //         return a=0;
-        //     }
-        //     else{
-        //         document.getElementById('profittable').classList.add('d-none')
-        //     }
-        // }
-        // function show_qr()
-        // {
-            
-        //     let a;
-        //     if(a==1){
-
-        //         document.getElementById('qrcodedisplay').classList.remove('d-none')
-        //         return a=0;
-        //     }
-        //     else{
-        //         document.getElementById('qrcodedisplay').classList.add('d-none')
-                
-        //     }
-        // }
+        
     </script>
 </body>
 

@@ -7,7 +7,14 @@ select{
 }
 form{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
 
+}
+.formin{
+    display: inline-block;
+    justify-content: center;
 }
 label{
     margin-left: 25px;
@@ -15,8 +22,24 @@ label{
 .customise{
     display: flex;
     flex-direction: row;
+    flex-wrap:wrap;
     margin-top:20px;
-    margin-left:25vw;
+    margin-left:23vw;
+}
+.customise .formin{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+   
+}
+.matter{
+    margin-top: 20px;
+    width:440px;
+    /* margin-left:20px;z */
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
 .happy{
     width: 120px;
@@ -26,17 +49,24 @@ label{
     flex-direction: row;
 }
 .gello{
-    margin-top: 32vh;
-    margin-left:30vw;
+    margin-top: 16vh;
+    margin-left:10vw;
     width:100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 
+}
+.qr-code{
+    height:320px;
+    width:320px;
 }
 .leftcontainer{
    
   
-width: 40vw; height: 30vh;
+width: 45vw; height: 30vh;
 padding:2px;
-margin-top: 150px;;
+margin-top: 150px;
 }
 .details{
    cursor: pointer;
@@ -44,6 +74,10 @@ margin-top: 150px;;
     margin:4px;
     
 
+}
+.btn btn-outline-dark my-1 ml-2{
+    display: block;
+    justify-content: center;
 }
 .nav-link{
     text-align: center;

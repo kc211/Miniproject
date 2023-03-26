@@ -5,20 +5,38 @@ body{
 .cin{
     display: flex;
     flex-direction: row;
+    margin:20px;
+    padding:10px;
 }
 .gello{
-    margin-top: 32vh;
-    margin-left:30vw;
+    margin-top: 16vh;
+    margin-left:5vw;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 
+}
+#reader{
+    width: 480px;
+    height:390px;
+}
+.matter{
+    margin-top: 20px;
+    width:440px;
+    /* margin-left:20px; */
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
 .leftcontainer{
-    
-  width:20vw;
- height: 30vh;
-padding:2px;
-margin-top: 150px;
-
-}
+   
+  
+    width: 40vw; height: 30vh;
+    padding:2px;
+    margin-top: 150px;
+    }
 .details{
    cursor: pointer;
     border-radius: 20px;

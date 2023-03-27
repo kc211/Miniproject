@@ -11,35 +11,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="adminpage.css">
     <title>Admin</title>
-    <script>function show_profile()
-        {
-            a=document.getElementById('profiletable');
-            b=document.getElementById('qrcodedisplay')
-            if(a.style.display=='none' && b.style.display=='none'){
-                a.classList.remove('d-none')
 
-            }
-            else{
-                b.classList.add('d-none')
-                a.classList.remove('d-none')
-            }
-            
-           
-        }
-        function show_qr(){
-            a=document.getElementById('profiletable');
-            b=document.getElementById('qrcodedisplay')
-            if(b.style.display=='none' && a.style.display=='none'){
-                
-                b.classList.remove('d-none')
-
-            }
-            else{
-                a.classList.add('d-none')
-                b.classList.remove('d-none')
-            }
-        }
-     </script>
 </head>
 
 <body>
@@ -91,17 +63,19 @@
             <div class="d-none" id="subject">
 
                 <label class="my-1 mr-2" for="Subject">Subject</label>
-                <select class="custom-select happy my-1 mr-sm-2" id="Subject">
+                <select class="custom-select happy my-1 mr-sm-2" id="Subject" >
                     <option selected>Choose...</option>
-                    <option value="wt">Webtechnology</option>
-                    <option value="mpi">MPI</option>
-                    <option value="se">SE</option>
-                    <option value="etc">ETC</option>
-                    <option value="cis">CIS</option>
-                    <option value="ensa">ENSA</option>
+                    <option class="subjects_option" value="wt">Webtechnology</option>
+                    <option class="subjects_option" value="mpi">MPI</option>
+                    <option class="subjects_option" value="se">SE</option>
+                    <option class="subjects_option" value="etc">ETC</option>
+                    <option class="subjects_option" value="cis">CIS</option>
+                    <option class="subjects_option" value="ensa">ENSA</option>
+                    <option class="subjects_option" value="dat">DAT</option>
+                    <option class="subjects_option" value="spa">SPA</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-outline-dark my-1 ml-2">Verify</button>
+            <button type="submit" class="btn btn-outline-dark my-1 ml-2" onclick="verify_function()">Verify</button>
         </form>
     </div>
 
@@ -113,16 +87,16 @@
             <ul class="nav flex-column">
                 <li class="nav-item details">
                     <a class="nav-link hoverlink" id="profile" href="#"
-                        onclick="show_profile()">Profile</a>
+                        onclick="show_profile()" >Profile</a>
                 </li>
                 <li class="nav-item details">
-                    <a class="nav-link hoverlink" id="scan" href="#" onclick="show_qr()">Get the QR</a>
+                    <a class="nav-link hoverlink" id="scan" href="#" onclick="subject_qr(), show_qr()">Get the QR</a>
                 </li>
                 <li class="nav-item details">
                     <a class="nav-link hoverlink" href="#">Result review</a>
                 </li>
                 <li class="nav-item details">
-                    <a class="nav-link hoverlink">Time-table</a>
+                    <a class="nav-link hoverlink" >Time-table</a>
                 </li>
             </ul>
         </div>
@@ -153,15 +127,41 @@
                     </tbody>
                 </table>
             </div>
-                <div class="qrcode d-none" id="qrcodedisplay" value="1">
-                    <img src="hello.png" class="qr-code" alt="">
+            <div class="qrcode d-none verification" id="after_verification">
+                <p>please select the subject else this is will be not available</p></div>
+            <div class="qrcode d-none" id="qrcodedisplay" value="subjectQrs">
+                
+                <div class="qrcode d-none" id="WTqr" value="WTqr">
+                    <img src="SID53.png" class="qr-code" alt="">
                 </div>
+                <div class="qrcode d-none" id="MPIqr" value="MPIqr">
+                    <img src="SID54.png" class="qr-code" alt="">
+                </div>
+                <div class="qrcode d-none" id="SEqr" value="SEqr">
+                    <img src="SID55.png" class="qr-code" alt="">
+                </div>
+                <div class="qrcode d-none" id="ETCqr" value="ETCqr">
+                    <img src="SID56.png" class="qr-code" alt="">
+                </div>
+                <div class="qrcode d-none" id="CISqr" value="CISqr">
+                    <img src="SID57.png" class="qr-code" alt="">
+                </div>
+                <div class="qrcode d-none" id="ENSAqr" value="ENSAqr">
+                    <img src="SID58.png" class="qr-code" alt="">
+                </div>
+                <div class="qrcode d-none" id="DATqr" value="DATqr">
+                    <img src="SID59.png" class="qr-code" alt="">
+                </div>
+                <div class="qrcode d-none" id="SPAqr" value="SPAqr">
+                    <img src="SID60.png" class="qr-code" alt="">
+                </div>
+            </div>
         </div>
-
-    </div>
-    <!--JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            
+        </div>
+        <!--JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
@@ -170,6 +170,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+    <script src="admin.js"></script>
     <script>
         function enable_the_section(answer) {
             console.log(answer.value);
@@ -190,6 +191,35 @@
         }
         
     </script>
+        <script>function show_profile()
+            {
+                a=document.getElementById('profiletable');
+                b=document.getElementById('qrcodedisplay')
+                if(a.style.display=='none' && b.style.display=='none'){
+                    a.classList.remove('d-none')
+    
+                }
+                else{
+                    b.classList.add('d-none')
+                    a.classList.remove('d-none')
+                }
+                
+               
+            }
+            function show_qr(){
+                a=document.getElementById('profiletable');
+                b=document.getElementById('qrcodedisplay')
+                if(b.style.display=='none' && a.style.display=='none'){
+                    
+                    b.classList.remove('d-none')
+    
+                }
+                else{
+                    a.classList.add('d-none')
+                    b.classList.remove('d-none')
+                }
+            }
+         </script>
 </body>
 
 </html>

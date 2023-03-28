@@ -102,14 +102,15 @@
 // }
 function verify_function(){
  let a;
- let ar;
-    a=document.getElementById('Subject').this;
-    ar=a.value;
-    console.log(ar)
-    if(ar==null){
-        let a=document.getElementById('scan');
-        document.getElementById('after_verification').classList.remove('d-none')
+
+    a=document.getElementById('Subject').value;
+    
+    console.log(a)
+    if(a==null){
+        let ar=document.getElementById('scan');
+       
         a.ariaDisabled=true;
+      document.getElementById('after_verification').classList.remove('d-none')
        
     }
 }

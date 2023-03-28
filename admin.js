@@ -101,10 +101,10 @@
 //    console.log(a)
 // }
 function verify_function(){
-    a=document.getElementById('Subject').value;
-
+    a=document.getElementById('Subject').this;
+    ar=a.value;
     console.log(a)
-    if(a==null){
+    if(ar==null){
         let a=document.getElementById('scan');
         document.getElementById('after_verification').classList.remove('d-none')
         a.ariaDisabled=true;

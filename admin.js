@@ -101,9 +101,11 @@
 //    console.log(a)
 // }
 function verify_function(){
+ let a;
+ let ar;
     a=document.getElementById('Subject').this;
     ar=a.value;
-    console.log(a)
+    console.log(ar)
     if(ar==null){
         let a=document.getElementById('scan');
         document.getElementById('after_verification').classList.remove('d-none')

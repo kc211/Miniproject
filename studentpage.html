@@ -169,7 +169,7 @@
         // let scanner = new Instascan.Scanner(opts);
         scanner.addListener('scan', function (content) {
             console.log(content);
-            QRcodigo.set(content);
+           // QRcodigo.set(content);
             scanner.stop();
         });
         Instascan.Camera.getCameras().then(function (cameras) {

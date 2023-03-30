@@ -56,3 +56,12 @@ body{
     font-size:1.3rem;
 color:black;
 }
+.preview_scanner{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}

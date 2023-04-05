@@ -91,3 +91,40 @@ margin-top: 150px;
     font-size:1.3rem;
 color:black;
 }
+
+@media all and (max-width:1115px){
+    .customise{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main_responsive{
+        display: flex;
+        flex-direction: column;
+    }
+    .button_responsive{
+        margin:10px;
+    }
+}
+@media all and (max-width:885px){
+    .customise{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main_responsive{
+        display: flex;
+        flex-direction: column;
+    }
+    .cin{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .gello{
+        flex-direction: column;
+    }
+    .leftcontainer{
+        margin-top:15vh
+    }
+}

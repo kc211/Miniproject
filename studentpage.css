@@ -78,5 +78,14 @@ color:black;
 .leftcontainer{
     margin-top:15vh
 }
+.preview_scanner{
+    width:75vw;
+}
+.stop_scan{
+    margin:12px;
+}
+.active{
+    height: 290px;
+}
 
 }
